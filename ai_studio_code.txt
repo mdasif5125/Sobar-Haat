@@ -1,0 +1,31 @@
+SobarHaat/
+├── SobarHaat-v1.0.apk                   <-- Ready-to-install APK
+├── app/
+│   ├── build.gradle.kts                 <-- App dependencies & build setup
+│   ├── google-services.json             <-- Firebase configuration
+│   └── src/main/
+│       ├── AndroidManifest.xml          <-- App permissions & launcher settings
+│       ├── java/com/example/
+│       │   ├── MainActivity.kt          <-- Main app controller & edge-to-edge UI
+│       │   ├── data/
+│       │   │   ├── local/               <-- Room database (DAOs, seed catalog)
+│       │   │   ├── model/               <-- Product, Order, Cart, User models
+│       │   │   ├── remote/              <-- Firestore cloud sync manager
+│       │   │   └── repository/          <-- Data repository
+│       │   ├── localization/
+│       │   │   ├── Language.kt          <-- Currency formatting (৳) & Bengali numerals
+│       │   │   └── Strings.kt           <-- Complete Bangla & English dictionaries
+│       │   └── ui/
+│       │       ├── MainViewModel.kt     <-- Cart, search, order & language state
+│       │       ├── components/          <-- TopBar, BottomNav, ProductCard, Banners
+│       │       ├── screens/             <-- Onboarding, Auth, Home, Catalog,
+│       │       │                            Detail, Cart, Checkout, Confirmation,
+│       │       │                            OrderHistory, Profile, Privacy, Terms
+│       │       └── theme/               <-- SobarHaat M3 emerald theme & colors
+│       └── res/
+│           ├── drawable/                <-- Launcher icons & promo banners
+│           └── values/                  <-- App name ("SobarHaat") & database config
+├── firestore.rules                      <-- Cloud security rules
+├── firebase-blueprint.json              <-- Database schema
+├── settings.gradle.kts                  <-- Project root definition
+└── metadata.json                        <-- Studio app metadata
